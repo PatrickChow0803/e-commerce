@@ -4,6 +4,9 @@ import 'package:commerce/screens/home.dart';
 import 'package:commerce/screens/search.dart';
 import 'package:commerce/screens/user_info.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/linecons_icons.dart';
+import 'package:fluttericon/maki_icons.dart';
+import 'package:fluttericon/typicons_icons.dart';
 
 class BottomBarScreen extends StatefulWidget {
   @override
@@ -65,11 +68,11 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
               currentIndex: _selectedPageIndex,
               items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
+                  icon: Icon(Typicons.home),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.rss_feed),
+                  icon: Icon(Typicons.rss),
                   label: 'Feeds',
                 ),
                 BottomNavigationBarItem(
@@ -79,12 +82,12 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(
-                    Icons.shopping_bag,
+                    Linecons.shop,
                   ),
                   label: 'Cart',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
+                  icon: Icon(Typicons.user),
                   label: 'User',
                 ),
               ],
@@ -101,7 +104,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           splashColor: Colors.grey,
           tooltip: 'Search',
           elevation: 4,
-          child: Icon(Icons.search),
+          child: Icon(Typicons.search),
           onPressed: () => setState(() {
             _selectedPageIndex = 2;
           }),
